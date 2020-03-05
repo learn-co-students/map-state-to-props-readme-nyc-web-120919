@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { container } from 'react-redux;'
 import './App.css';
 
 class App extends Component {
@@ -21,4 +22,8 @@ class App extends Component {
   }
 };
 
-export default App;
+const mps = state => {
+  return {items: state.items};
+}
+
+export default connect(mps)(App);
